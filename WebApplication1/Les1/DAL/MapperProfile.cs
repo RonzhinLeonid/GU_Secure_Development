@@ -7,10 +7,8 @@ namespace Les1.DAL
     {
         public MapperProfile()
         {
-            //CreateMap<DebetCardRequest, DebetCard>();
             CreateMap<DebetCard, DebetCardRequest>();
             CreateMap<DebetCardResponse, DebetCard>();
-            //CreateMap<DebetCard, DebetCardResponse>();
         }
     }
 }
