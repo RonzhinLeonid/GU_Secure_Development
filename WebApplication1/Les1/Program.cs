@@ -20,7 +20,13 @@ namespace Les1
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder
+                        .ConfigureAppConfiguration((ctx, config) =>
+                        {
+                            config.AddEnvironmentVariables();
+                        })
+                        .ConfigureLogging(builder => builder.AddJsonConsole())
+                        .UseStartup<Startup>();
                 });
     }
 }
