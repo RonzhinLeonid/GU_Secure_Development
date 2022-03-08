@@ -9,5 +9,6 @@ namespace DataLayer
         }
 
         public DbSet<DebetCard> DebetCards { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

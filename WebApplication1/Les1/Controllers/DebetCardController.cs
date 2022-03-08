@@ -2,6 +2,7 @@
 using DataLayer;
 using Les1.DAL;
 using Les1.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace Les1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class DebetCardController : ControllerBase
     {
         private readonly IDebetCardRepository _debetCardRepository;
