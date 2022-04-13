@@ -17,6 +17,7 @@ using AuthorizationAPI;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Les1.Validations;
 
 namespace Les1
 {
@@ -86,6 +87,9 @@ namespace Les1
                     }
                 });
             });
+
+            services.AddSingleton<IDebetCardCreateValidation, DebetCardCreateValidations>();
+            services.AddSingleton<IDebetCardUpdateValidation, DebetCardUpdateValidations>();
 
             services.AddDbContext<ApplicationDataContext>(options =>
             {

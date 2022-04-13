@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer", "DataLayer\Data
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Migrations", "Migrations\Migrations.csproj", "{D52F5217-A3C6-4ACB-A45E-E0782C7FD8AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationAPI", "AuthorizationAPI\AuthorizationAPI.csproj", "{FDA28D8A-FA09-47E1-BAAD-86D0C8336D0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthorizationAPI", "AuthorizationAPI\AuthorizationAPI.csproj", "{FDA28D8A-FA09-47E1-BAAD-86D0C8336D0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationTests", "ValidationTests\ValidationTests.csproj", "{7E6CBB49-CCA2-4E20-88DE-227D982E9885}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{FDA28D8A-FA09-47E1-BAAD-86D0C8336D0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDA28D8A-FA09-47E1-BAAD-86D0C8336D0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDA28D8A-FA09-47E1-BAAD-86D0C8336D0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E6CBB49-CCA2-4E20-88DE-227D982E9885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E6CBB49-CCA2-4E20-88DE-227D982E9885}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E6CBB49-CCA2-4E20-88DE-227D982E9885}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E6CBB49-CCA2-4E20-88DE-227D982E9885}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

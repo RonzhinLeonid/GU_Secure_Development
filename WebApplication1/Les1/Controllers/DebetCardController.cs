@@ -18,24 +18,34 @@ namespace Les1.Controllers
     {
         private readonly IDebetCardRepository _debetCardRepository;
         private readonly IMapper _mapper;
+        private readonly IDebetCardCreateValidation _createRequestValidator;
+        private readonly IDebetCardUpdateValidation _updateRequestValidator;
 
-        public DebetCardController(IDebetCardRepository debetCardRepository, IMapper mapper)
+        public DebetCardController(IDebetCardRepository debetCardRepository, IMapper mapper, IDebetCardCreateValidation createRequestValidator , IDebetCardUpdateValidation updateRequestValidator)
         {
             _debetCardRepository = debetCardRepository;
             _mapper = mapper;
+            _createRequestValidator = createRequestValidator;
+            _updateRequestValidator = updateRequestValidator;
         }
 
         [HttpPost]
-        public async Task Add(DebetCardResponse request)
+        public async Task<DebetCardCreateResponse> Add(DebetCardRequest request)
         {
+            var failures = _createRequestValidator.ValidateEntity(request);
+            if (failures.Count > 0)
+            {
+                return new DebetCardCreateResponse(failures, false);
+            }
             await _debetCardRepository.Add(_mapper.Map<DebetCard>(request));
+            return new DebetCardCreateResponse(failures, true);
         }
 
         [HttpGet]
-        public async Task<IEnumerable<DebetCardRequest>> Get()
+        public async Task<IEnumerable<DebetCardResponse>> Get()
         {
             var data = await _debetCardRepository.Get();
-            return data.Select(_mapper.Map<DebetCardRequest>);
+            return data.Select(_mapper.Map<DebetCardResponse>);
         }
 
         [HttpDelete("{id:int}")]
@@ -45,9 +55,15 @@ namespace Les1.Controllers
         }
 
         [HttpPut]
-        public async Task UpdateAsync(DebetCardResponse request)
+        public async Task<DebetCardUpdateResponse> UpdateAsync(DebetCardRequest request)
         {
+            var failures = _updateRequestValidator.ValidateEntity(request);
+            if (failures.Count > 0)
+            {
+                return new DebetCardUpdateResponse(failures, false);
+            }
             await _debetCardRepository.Update(_mapper.Map<DebetCard>(request));
+            return new DebetCardUpdateResponse(failures, true);
         }
     }
 }
