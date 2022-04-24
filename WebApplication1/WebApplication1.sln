@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32113.165
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Les6 book", "Les6 book\Les6 book.csproj", "{88162D6A-C2F8-4CDF-8502-BB0203C03A7E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Les6", "Les6\Les6.csproj", "{DD72065C-E4CE-4109-8B14-91B9A0B9798A}"
 EndProject
 Global
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{88162D6A-C2F8-4CDF-8502-BB0203C03A7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{88162D6A-C2F8-4CDF-8502-BB0203C03A7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{88162D6A-C2F8-4CDF-8502-BB0203C03A7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{88162D6A-C2F8-4CDF-8502-BB0203C03A7E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DD72065C-E4CE-4109-8B14-91B9A0B9798A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DD72065C-E4CE-4109-8B14-91B9A0B9798A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD72065C-E4CE-4109-8B14-91B9A0B9798A}.Release|Any CPU.ActiveCfg = Release|Any CPU
